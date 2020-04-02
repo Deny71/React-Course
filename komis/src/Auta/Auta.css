@@ -1,0 +1,19 @@
+.Auta {
+    text-align: center;
+    font-size: calc(5px + 2vmin);
+}
+
+.Table{
+    text-align: center;
+    background-color: #282c34;
+    color: white;
+    font-size: 150%;
+    text-align: end;
+    width: 100%;
+    margin: auto;
+    border-top: 15px solid white;
+    border-bottom: 5px solid rgb(196, 196, 196);
+    border-left: 5px solid rgb(196, 196, 196);
+    border-right: 5px solid rgb(196, 196, 196);
+    
+}

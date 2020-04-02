@@ -1,0 +1,32 @@
+.Tlo{
+	 background-color: #282c34;
+}
+
+
+
+.Button {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #cccccc 5%, #a3a0a3 100%);
+	background-color:#282c34;
+	border-radius:18px;
+	border:2px solid #d8dbdb;
+	display:inline-block;
+	cursor:pointer;
+	color:#282c34;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:17px 39px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.Button:hover {
+	background:linear-gradient(to bottom, #a3a0a3 5%, #cccccc 100%);
+	background-color:#a3a0a3;
+}
+.Button:active {
+	position:relative;
+	top:1px;
+}
+
+        
