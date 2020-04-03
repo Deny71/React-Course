@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from '../axios-komis'
-import dodajAuto from './DodajAuto.css'
+import dodajAuto from './DodajAuto.module.css'
 
 class DodajAuto extends Component{
 
@@ -29,7 +29,7 @@ state = {
     }
 render () {
     return (
-        <form className = "dodajAuto" onSubmit={this.zapiszAuto}> 
+        <form className = {dodajAuto.dodajAuto} onSubmit={this.zapiszAuto}> 
             <label htmlFor="markaPojazdu"><p style={{color: 'white'}}>Marka pojazdu</p> </label>
             <input id="markaPojazdu" name="Marka"></input>
             <br></br>
@@ -53,7 +53,7 @@ render () {
             <br></br>
             <br></br>
 
-            <button className="przycisk"type="submit" >
+            <button className={dodajAuto.przycisk} type="submit" >
                   Dodaj samochod
                 </button>
                 <br></br>

@@ -2,9 +2,8 @@ import React from 'react'
 import axios from '../axios-komis'
 import DodajAuto from '../DodajAuto/DodajAuto.js'
 import UsunAuto from '../UsunAuto/UsunAuto'
-import { Route, Link, withRouter } from 'react-router-dom'
-import usunA from '../UsunAuto/usunA.css'
-import Auta from './Auta.css'
+import { Route, withRouter } from 'react-router-dom'
+import Auta from './Auta.module.css'
 import Szczegoly from '../Szczegoly/Szczegoly.js'
 
 class Autko extends React.Component {
@@ -18,7 +17,6 @@ class Autko extends React.Component {
         for (var prop in res.data) {
           tempCar.push({ ...res.data[prop], id: prop })
         }
-        console.log(tempCar)
         this.setState({ auto: tempCar });
       })
   }
@@ -37,6 +35,7 @@ class Autko extends React.Component {
             <td>{car.mordel}</td>
             <td>{car.rocznik}</td>
             <td>{car.cena}</td>
+            <td><button className={Auta.usunAuto} onClick={(e) => this.delCar(car.id,e)}>X</button> </td>
           </tr>)
 
 
@@ -46,10 +45,8 @@ class Autko extends React.Component {
   }
 
   szczegolyAuta = (carId) => {
-   // console.log("boom")
+
     this.props.history.push("/car-details?car=" + carId)
-
-
   }
 
   addCar = (car) => {
@@ -58,9 +55,13 @@ class Autko extends React.Component {
     this.setState({ auto: tmp })
   }
 
-  delCar = (id) => {
+  delCar = (id,e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    axios.delete("/cars/" +id +".json")
     const tmp = this.state.auto.filter((auto) => auto.id !== id)
     this.setState({ auto: tmp })
+    
   }
 
 
@@ -68,7 +69,7 @@ class Autko extends React.Component {
     let zero = null
     if (this.state.auto) {
       try {
-        zero = <UsunAuto className="Tlo" id={this.state.auto[0].id} delC={this.delCar} ></UsunAuto>
+        zero = <UsunAuto className={Auta.Tlo} id={this.state.auto[0].id} delC={this.delCar} ></UsunAuto>
       } catch{ }
     }
 
@@ -79,20 +80,20 @@ class Autko extends React.Component {
         <Route path="/car-details" component={Szczegoly}  ></Route>
         <Route path="/" exact render={() => <DodajAuto addC={this.addCar}></DodajAuto>} />
         <Route path="/" exact render={() =>
-          <table className="Table" >
+          <table className={Auta.Table} >
             <thead>
-            <td>LP</td>
-            <td>Marka</td>
-            <td>Model</td>
-            <td>Rocznik</td>
-            <td>Cena</td>
+              <tr>
+                <td>LP</td>
+                <td>Marka</td>
+                <td>Model</td>
+                <td>Rocznik</td>
+                <td>Cena</td>
+              </tr>
             </thead>
             <tbody>{this.createTable()}</tbody>
           </table>}
         />
-        <Route path="/" exact render={() => zero} />
-
-
+        {/* <Route path="/" exact render={() => zero} /> */}
       </React.Fragment>
 
     )

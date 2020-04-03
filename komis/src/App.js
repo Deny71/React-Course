@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Autko from './Auta/Auta';
-import './Auta/Auta.css'
+import './Auta/Auta.module.css'
 import { BrowserRouter } from 'react-router-dom'
 
 

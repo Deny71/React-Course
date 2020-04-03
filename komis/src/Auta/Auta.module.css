@@ -1,0 +1,47 @@
+.Auta {
+    text-align: center;
+    font-size: calc(5px + 2vmin);
+}
+
+.Table{
+    text-align: center;
+    background-color: #282c34;
+    color: white;
+    font-size: 150%;
+    text-align: end;
+    width: 100%;
+    margin: auto;
+    border-top: 15px solid white;
+    border-bottom: 5px solid rgb(196, 196, 196);
+    border-left: 5px solid rgb(196, 196, 196);
+    border-right: 5px solid rgb(196, 196, 196);
+    
+}
+.Tlo{
+    background-color: #282c34;
+}
+.usunAuto {
+        box-shadow:inset -1px 1px 8px 0px #f29c93;
+        background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+        background-color:#fe1a00;
+        border-radius:6px;
+        border:1px solid #d83526;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 8px;
+        text-decoration:none;
+        text-shadow:0px 0px 0px #b23e35;
+    }
+    .usunAuto:hover {
+        background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+        background-color:#ce0100;
+    }
+    .usunAuto:active {
+        position:relative;
+        top:1px;
+    }
+

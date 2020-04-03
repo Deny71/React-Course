@@ -1,0 +1,53 @@
+.widok{
+    text-align: center;
+    background-color: #282c34;
+    color: white;
+    font-size: 150%;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    border-top: 15px solid white;
+    border-bottom: 5px solid rgb(196, 196, 196);
+    border-left: 5px solid rgb(196, 196, 196);
+    border-right: 5px solid rgb(196, 196, 196);
+    
+}
+
+.naglowek{
+
+    background-color: #282c34;
+    color: white;
+    border-top: 15px solid white;
+    border-bottom: 5px solid rgb(196, 196, 196);
+    border-left: 5px solid rgb(196, 196, 196);
+    border-right: 5px solid rgb(196, 196, 196);
+}
+
+.divek{
+    background-color: #282c34;
+}
+
+.powrot{
+        box-shadow:inset -2px 3px 15px -1px #fff6af;
+        background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+        background-color:#ffec64;
+        border-radius:18px;
+        border:2px solid #ffaa22;
+        display:inline-block;
+        cursor:pointer;
+        color:#333333;
+        font-family:Arial;
+        font-size:17px;
+        font-weight:bold;
+        padding:17px 39px;
+        text-decoration:none;
+        text-shadow:2px 1px 0px #ffee66;
+    }
+    .powrot:hover {
+        background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+        background-color:#ffab23;
+    }
+    .powrot:active {
+        position:relative;
+        top:1px;
+    }
